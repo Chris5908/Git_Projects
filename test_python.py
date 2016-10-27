@@ -1,18 +1,25 @@
-def solution(a):
-    # write your code in Python 2.7
-    b = a[::-1].split()
+#
+# Function to inverse a string chain
+#
+
+def string_inversion(a):
+    b = a[::-1].split()         # Inverse the string chain and split it into a list of words
     c = []
-    number = len(b)
+    number = len(b)             # Save the numbers of words
     while number:
         number -= 1
         c.append(b[number])
         if( number > 0) :
             c.append(' ')
     return ''.join(c)
-#    pass
 
 
 
 S = "we test coders"
-test = solution(S)
+
+test = string_inversion(S)
+
 print( test )
+
+
+# Result : ew tset sredoc
